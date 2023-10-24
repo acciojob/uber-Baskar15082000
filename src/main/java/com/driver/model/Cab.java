@@ -18,8 +18,8 @@ public class Cab {
 
 
 
-    public Cab(int capId, int perKmRate, boolean available) {
-        this.capId = capId;
+    public Cab( int perKmRate, boolean available) {
+
         this.perKmRate = perKmRate;
         this.available = available;
     }
@@ -55,5 +55,6 @@ public class Cab {
     public void setAvailable(boolean available) {
         this.available = available;
     }
+
 
 }
