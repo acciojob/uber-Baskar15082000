@@ -34,8 +34,8 @@ public class CustomerController {
 
 		}
 		catch (Exception e){
-			throw  new Exception("No cab available!");
-			//Res
+
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 
 
