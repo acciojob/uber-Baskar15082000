@@ -51,11 +51,12 @@ public class CustomerServiceImpl implements CustomerService {
 		//Avoid using SQL query
 		List<Driver> drivers=driverRepository2.findAll();
 		Driver lower_id=null;
-		int min=Integer.MAX_VALUE;
+		//int min=Integer.MAX_VALUE;
 		for(Driver driver:drivers){
-			if(driver.getDriverId()<min && driver.getCab().isAvailable()){
-				min=driver.getDriverId();
+			if(driver.getCab().isAvailable()){
+		//		min=driver.getDriverId();
 				lower_id=driver;
+				break;
 			}
 
 		}
