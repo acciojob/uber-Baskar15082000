@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
-
-	CustomerServiceImpl customerService =new CustomerServiceImpl();
+    @Autowired
+	CustomerServiceImpl customerService ;
 	@PostMapping("/register")
 	public ResponseEntity<Void> registerCustomer(@RequestBody Customer customer){
 		customerService.register(customer);
@@ -22,6 +22,7 @@ public class CustomerController {
 
 	@DeleteMapping("/delete")
 	public void deleteCustomer(@RequestParam Integer customerId){
+
 		customerService.deleteCustomer(customerId);
 	}
 
@@ -34,6 +35,7 @@ public class CustomerController {
 		}
 		catch (Exception e){
 			throw  new Exception("No cab available!");
+			//Res
 		}
 
 

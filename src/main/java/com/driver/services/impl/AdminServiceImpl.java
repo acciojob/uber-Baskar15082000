@@ -40,6 +40,7 @@ public class AdminServiceImpl implements AdminService {
 		}
 		Admin toupdateadmin =optionalAdmin.get();
 		toupdateadmin.setPassword(password);
+		adminRepository1.save(toupdateadmin);//--
 		return toupdateadmin;
 
 	}

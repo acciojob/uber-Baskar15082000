@@ -8,9 +8,9 @@ public class Admin{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int adminId;
-    @Column(nullable = false)
+   // @Column(nullable = false)
     String userName;
-    @Column(nullable = false)
+    //@Column(nullable = false)
     String password;
 
     public Admin(int adminId, String userName, String password) {

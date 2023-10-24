@@ -15,8 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
-
-	AdminServiceImpl adminService =new AdminServiceImpl();
+    @Autowired
+	AdminServiceImpl adminService ;
 	@PostMapping("/register")
 	public ResponseEntity<Void> registerAdmin(@RequestBody Admin admin){
 		adminService.adminRegister(admin);
@@ -31,6 +31,7 @@ public class AdminController {
 
 	@DeleteMapping("/delete")
 	public void deleteAdmin(@RequestParam Integer adminId){
+
 		adminService.deleteAdmin(adminId);
 	}
 
